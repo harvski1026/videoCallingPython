@@ -12,7 +12,7 @@ import pyaudio
 import wave
 import time
 
-HOST = '192.168.1.12'
+HOST = '192.168.1.11'
 PORT = 50053
 
 
@@ -22,7 +22,7 @@ def audio_stream():
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         print('Socket created')
 
-        s.bind(('192.168.1.12', 8000))
+        s.bind(('192.168.1.11', 8000))
         print('Socket bind complete')
         s.listen(20)
         print('Socket now listening')
@@ -105,7 +105,7 @@ def video_stream():
 
         frame = pickle.loads(frame_data)
         print(frame.size)
-        cv2.imshow('frame', frame)
+        cv2.imshow('Client Image', frame)
         cv2.waitKey(10)
 
 

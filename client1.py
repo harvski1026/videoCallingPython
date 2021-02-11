@@ -14,7 +14,7 @@ def video_stream():
     cap = cv2.VideoCapture(0)
     try:
         clientsocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        clientsocket.connect(('192.168.1.10', 50053))
+        clientsocket.connect(('192.168.1.11', 50053))
     except socket.error as exc:
         print("")
 
@@ -32,7 +32,7 @@ def audio_stream():
     RECORD_SECONDS = 40
 
     try:
-        HOST = '192.168.1.10'  # The remote host
+        HOST = '192.168.1.11'  # The remote host
         PORT = 8000  # The same port as used by the server
 
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
